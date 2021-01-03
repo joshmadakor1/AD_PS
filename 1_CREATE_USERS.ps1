@@ -10,7 +10,7 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
     $first = $n.Split(" ")[0].ToLower()
     $last = $n.Split(" ")[1].ToLower()
     $username = "$($first.Substring(0,1))$($last)".ToLower()
-    Write-Host "Creting user: $($username)" -BackgroundColor Black -ForegroundColor Cyan
+    Write-Host "Creating user: $($username)" -BackgroundColor Black -ForegroundColor Cyan
     
     New-AdUser -AccountPassword $password `
                -GivenName $first `
