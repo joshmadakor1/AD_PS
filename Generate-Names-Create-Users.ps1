@@ -6,7 +6,7 @@ $NUMBER_OF_ACCOUNTS_TO_CREATE = 10000
 Function generate-random-name() {
     $consonants = @('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z')
     $vowels = @('a','e','i','o','u','y')
-    $nameLength = Get-Random -Minimum 3 -Maximum 12
+    $nameLength = Get-Random -Minimum 3 -Maximum 7
     $count = 0
     $name = ""
 
@@ -40,6 +40,9 @@ while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
                -Name $username `
                -EmployeeID $username `
                -PasswordNeverExpires $true `
-               -Path "ou=_USERS,$(([ADSI]`"").distinguishedName)" `
+               -Path "ou=_EMPLOYEES,$(([ADSI]`"").distinguishedName)" `
                -Enabled $true
-} 
+}
+
+$cat = "germangray"
+$cat[0] 
