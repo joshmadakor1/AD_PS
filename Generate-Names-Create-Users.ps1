@@ -42,7 +42,5 @@ while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
                -PasswordNeverExpires $true `
                -Path "ou=_EMPLOYEES,$(([ADSI]`"").distinguishedName)" `
                -Enabled $true
+    $count++
 }
-
-$cat = "germangray"
-$cat[0] 
